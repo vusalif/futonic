@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #2700C6;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+}
+
+.text-container {
+    margin-bottom: 2rem;
+}
+
+.logo {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards 1.5s;
+}
+
+.social-link {
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: white;
+    margin-left: 2px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 3rem;
+    }
+    
+    .social-links {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 2.5rem;
+    }
+    
+    .social-links {
+        gap: 1rem;
+    }
+} 
