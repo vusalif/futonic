@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futonic | We're hiring!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root { --blue: #2f00d6; }
+        * { box-sizing: border-box; }
+        body { margin: 0; background: var(--blue); color: #fff; font-family: Inter, sans-serif; }
+        main { min-height: 100svh; display: grid; place-items: center; padding: 3rem 1.5rem; text-align: center; }
+        .hiring-content { width: min(100%, 42rem); }
+        h1 { margin: 0; font: 400 clamp(3rem, 9vw, 7rem) / 1 'Instrument Serif', serif; }
+        p { margin: 1.25rem 0 0; color: rgba(255, 255, 255, 0.72); font-size: clamp(0.95rem, 2vw, 1.15rem); }
+        a { color: #fff; }
+        .role-picker { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.75rem; margin-top: 2.5rem; }
+        .role-button { border: 1px solid rgba(255, 255, 255, 0.78); background: transparent; padding: 0.85rem 1rem; color: #fff; cursor: pointer; font: 400 0.85rem Inter, sans-serif; }
+        .role-button:hover, .role-button.is-active { background: #fff; color: var(--blue); }
+        .brief { display: none; margin-top: 2.25rem; border-top: 1px solid rgba(255, 255, 255, 0.42); padding-top: 1.5rem; text-align: left; }
+        .brief.is-active { display: block; }
+        .brief-label { margin: 0; color: rgba(255, 255, 255, 0.62); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; }
+        h2 { margin: 0.6rem 0 0; font: 400 clamp(2.1rem, 5vw, 3.3rem) / 1 'Instrument Serif', serif; }
+        .brief p { max-width: 38rem; line-height: 1.5; }
+        ul { margin: 1.25rem 0 0; padding-left: 1.15rem; color: rgba(255, 255, 255, 0.78); line-height: 1.65; }
+        .send-work { margin-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.42); padding-top: 1rem; }
+        .hiring-mark { display: inline-block; animation: hiring-pulse 950ms ease-in-out infinite; }
+        @keyframes hiring-pulse {
+            0%, 100% { opacity: 1; text-shadow: 0 0 0 transparent; }
+            50% { opacity: 0.15; text-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.8); }
+        }
+        @media (prefers-reduced-motion: reduce) { .hiring-mark { animation: none; } }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="hiring-content">
+            <h1>we're hiring<span class="hiring-mark">!</span></h1>
+            <p>Choose a role, complete the brief, and send us your work.</p>
+
+            <div class="role-picker" aria-label="Open role brief">
+                <button class="role-button" type="button" data-brief="graphic">Graphic Sport Designer</button>
+                <button class="role-button" type="button" data-brief="motion">Motion Designer</button>
+            </div>
+
+            <section class="brief" id="graphic-brief">
+                <p class="brief-label">Brief</p>
+                <h2>Graphic Sport Designer</h2>
+                <p>Create a matchday social visual that puts the player and the fixture at the centre of the story.</p>
+                <ul>
+                    <li>Design one 1080 x 1350 feed post and one 1080 x 1920 story adaptation.</li>
+                    <li>Use a player portrait, club colours, fixture information, and a strong type hierarchy.</li>
+                    <li>Keep the result focused, contemporary, and clearly football-led.</li>
+                </ul>
+                <p class="send-work">When it is ready, send your final files and source file to <a href="mailto:igbal@futonic.co?subject=Graphic%20Sport%20Designer%20brief">igbal@futonic.co</a>.</p>
+            </section>
+
+            <section class="brief" id="motion-brief">
+                <p class="brief-label">Brief</p>
+                <h2>Motion Designer</h2>
+                <p>Create a short motion treatment for a football matchday announcement that feels confident and precise.</p>
+                <ul>
+                    <li>Create a 10-15 second vertical animation in 1080 x 1920.</li>
+                    <li>Let portrait, typography, fixture details, and rhythm lead the sequence.</li>
+                    <li>Deliver an MP4 export together with the editable project file.</li>
+                </ul>
+                <p class="send-work">When it is ready, send your final files and source file to <a href="mailto:igbal@futonic.co?subject=Motion%20Designer%20brief">igbal@futonic.co</a>.</p>
+            </section>
+        </div>
+    </main>
+    <script>
+        const roleButtons = document.querySelectorAll('.role-button');
+        const briefs = document.querySelectorAll('.brief');
+
+        roleButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const selectedBrief = document.querySelector(`#${button.dataset.brief}-brief`);
+
+                roleButtons.forEach((item) => item.classList.toggle('is-active', item === button));
+                briefs.forEach((brief) => brief.classList.toggle('is-active', brief === selectedBrief));
+            });
+        });
+    </script>
+</body>
+</html>

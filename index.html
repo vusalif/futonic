@@ -19,6 +19,7 @@
 <body>
     <main class="site-shell">
         <section class="screen hero-screen" id="home">
+            <canvas class="hero-shimmer" aria-hidden="true"></canvas>
             <div class="hero-copy">
                 <h1 class="hero-title">Futonic</h1>
                 <p class="hero-subtitle">Creative Agency</p>
@@ -27,46 +28,101 @@
 
         <section class="screen vision-screen" id="vision">
             <div class="vision-grid">
-                <div class="vision-art vision-art-left"></div>
-                <div class="vision-art vision-art-center"></div>
-                <div class="vision-art vision-art-right"></div>
+                <div class="vision-art">
+                    <video class="vision-video" autoplay muted loop playsinline aria-hidden="true">
+                        <source src="mahir.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="vision-art">
+                    <video class="vision-video" autoplay muted loop playsinline aria-hidden="true">
+                        <source src="jalalvideo.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="vision-art">
+                    <video class="vision-video" autoplay muted loop playsinline aria-hidden="true">
+                        <source src="sekidikavideo.mp4" type="video/mp4">
+                    </video>
+                </div>
             </div>
             <div class="vision-overlay">
-                <h2 class="vision-heading">Vision</h2>
-                <p class="vision-text">We redefine how footballers build their presence beyond the pitch - through creative, authentic and consistent personal brands.</p>
+                <p class="vision-text">We help footballers build strong personal brands beyond the pitch.</p>
             </div>
         </section>
 
         <section class="screen choose-screen" id="choose-us">
             <div class="choose-copy">
                 <h2 class="choose-title">Who chooses us?</h2>
-                <p class="choose-text">Chosen by footballers building more than just a career.</p>
             </div>
 
             <div class="choose-grid">
-                <article class="choose-card">
-                    <div class="portrait-frame">
-                        <img src="1.png" alt="Mahir Emreli portrait" class="portrait-image">
-                    </div>
-                    <h3 class="person-name">Mahir Emreli</h3>
-                    <p class="person-role">Kuakrukakas</p>
-                </article>
+                <div class="choose-row">
+                    <article class="choose-card">
+                        <a class="portrait-link" href="https://www.instagram.com/emreli11/" target="_blank" rel="noopener noreferrer" aria-label="Mahir Emreli on Instagram">
+                            <div class="portrait-frame">
+                                <img src="mahir.jpg" alt="Mahir Emreli portrait" class="portrait-image">
+                                <video class="portrait-video" muted loop playsinline preload="metadata" aria-hidden="true">
+                                    <source src="mahir.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </a>
+                        <h3 class="person-name">Mahir Emreli</h3>
+                        <p class="person-role">Raków Częstochowa</p>
+                    </article>
 
-                <article class="choose-card">
-                    <div class="portrait-frame">
-                        <img src="3.png" alt="Edgar Adilkhanov portrait" class="portrait-image">
-                    </div>
-                    <h3 class="person-name">Edgar Adilkhanov</h3>
-                    <p class="person-role">Shakami</p>
-                </article>
+                    <article class="choose-card">
+                        <a class="portrait-link" href="https://www.instagram.com/adedgar10/" target="_blank" rel="noopener noreferrer" aria-label="Edgar Adilkhanov on Instagram">
+                            <div class="portrait-frame">
+                                <img src="edgar.jpg" alt="Edgar Adilkhanov portrait" class="portrait-image">
+                                <video class="portrait-video" muted loop playsinline preload="metadata" aria-hidden="true">
+                                    <source src="edgarvideo.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </a>
+                        <h3 class="person-name">Edgar Adilkhanov</h3>
+                        <p class="person-role">Şamaxı FK</p>
+                    </article>
 
-                <article class="choose-card">
-                    <div class="portrait-frame">
-                        <img src="2.png" alt="Reyhan Sedhadji portrait" class="portrait-image">
-                    </div>
-                    <h3 class="person-name">Reyhan Sedhadji</h3>
-                    <p class="person-role">Tuna</p>
-                </article>
+                    <article class="choose-card">
+                        <a class="portrait-link" href="https://www.instagram.com/huseynovjalal18/" target="_blank" rel="noopener noreferrer" aria-label="Jalal Huseynov on Instagram">
+                            <div class="portrait-frame">
+                                <img src="jalal.png" alt="Jalal Huseynov portrait" class="portrait-image">
+                                <video class="portrait-video" muted loop playsinline preload="metadata" aria-hidden="true">
+                                    <source src="jalalvideo.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </a>
+                        <h3 class="person-name">Jalal Huseynov</h3>
+                        <p class="person-role">Petrolul</p>
+                    </article>
+                </div>
+
+                <div class="choose-row">
+                    <article class="choose-card">
+                        <a class="portrait-link" href="https://www.instagram.com/r.senhadji/" target="_blank" rel="noopener noreferrer" aria-label="Rayan Senhadji on Instagram">
+                            <div class="portrait-frame">
+                                <img src="rayan.jpg" alt="Rayan Senhadji portrait" class="portrait-image">
+                                <video class="portrait-video" muted loop playsinline preload="metadata" aria-hidden="true">
+                                    <source src="rayanvideo.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </a>
+                        <h3 class="person-name">Rayan Senhadji</h3>
+                        <p class="person-role">Tobol Kostanay</p>
+                    </article>
+
+                    <article class="choose-card">
+                        <a class="portrait-link" href="https://www.instagram.com/jessesekidika/" target="_blank" rel="noopener noreferrer" aria-label="Jesse Sekidika on Instagram">
+                            <div class="portrait-frame">
+                                <img src="sekidika.jpg" alt="Jesse Sekidika portrait" class="portrait-image">
+                                <video class="portrait-video" muted loop playsinline preload="metadata" aria-hidden="true">
+                                    <source src="sekidikavideo.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </a>
+                        <h3 class="person-name">Jesse Sekidika</h3>
+                        <p class="person-role">Gangwon FC</p>
+                    </article>
+                </div>
             </div>
         </section>
 
@@ -78,41 +134,201 @@
                     <article class="gallery-card">
                         <div class="gallery-poster">
                             <img src="matchday5.jpg" alt="Mahir Emreli poster" class="gallery-image">
+                            <a class="gallery-view" href="https://www.behance.net/iqbalpsd" target="_blank" rel="noopener noreferrer">View more</a>
                         </div>
                         <h3 class="gallery-name">Mahir Emreli</h3>
-                        <p class="gallery-role">Kuakrukakas</p>
+                        <p class="gallery-role">Raków Częstochowa</p>
                     </article>
 
                     <article class="gallery-card">
                         <div class="gallery-poster">
-                            <img src="matchday3.jpg" alt="Purple matchday poster" class="gallery-image">
+                            <img src="matchday3.jpg" alt="Edgar Adilkhanov poster" class="gallery-image">
+                            <a class="gallery-view" href="https://www.behance.net/iqbalpsd" target="_blank" rel="noopener noreferrer">View more</a>
                         </div>
-                        <h3 class="gallery-name">Mahir Emreli</h3>
-                        <p class="gallery-role">Kuakrukakas</p>
+                        <h3 class="gallery-name">Edgar Adilkhanov</h3>
+                        <p class="gallery-role">Şamaxı FK</p>
                     </article>
 
                     <article class="gallery-card">
                         <div class="gallery-poster">
-                            <img src="matchday4.jpg" alt="Yellow matchday poster" class="gallery-image">
+                            <img src="matchday4.jpg" alt="Jalal Huseynov poster" class="gallery-image">
+                            <a class="gallery-view" href="https://www.behance.net/iqbalpsd" target="_blank" rel="noopener noreferrer">View more</a>
                         </div>
-                        <h3 class="gallery-name">Mahir Emreli</h3>
-                        <p class="gallery-role">Kuakrukakas</p>
+                        <h3 class="gallery-name">Jalal Huseynov</h3>
+                        <p class="gallery-role">Petrolul</p>
                     </article>
 
                     <article class="gallery-card">
                         <div class="gallery-poster">
-                            <img src="matchday.jpg" alt="Green matchday poster" class="gallery-image">
+                            <img src="matchday.jpg" alt="Rayan Senhadji poster" class="gallery-image">
+                            <a class="gallery-view" href="https://www.behance.net/iqbalpsd" target="_blank" rel="noopener noreferrer">View more</a>
                         </div>
-                        <h3 class="gallery-name">Mahir Emreli</h3>
-                        <p class="gallery-role">Kuakrukakas</p>
+                        <h3 class="gallery-name">Rayan Senhadji</h3>
+                        <p class="gallery-role">Tobol Kostanay</p>
                     </article>
                 </div>
             </div>
         </section>
 
         <section class="screen join-screen" id="join">
-            <h2 class="join-title">wanna join club?</h2>
+            <button class="join-title join-trigger" type="button" aria-expanded="false" aria-controls="contact-panel">wanna join club?</button>
+
+            <div class="contact-panel" id="contact-panel">
+                <form class="contact-form" id="contact-form" action="https://formsubmit.co/igbal@futonic.co" method="POST">
+                    <input type="hidden" name="_subject" value="New Futonic contact inquiry">
+                    <input type="hidden" name="_template" value="table">
+                    <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <input type="text" name="name" placeholder="Your name" aria-label="Your name" required>
+                    <input type="email" name="email" placeholder="Your email" aria-label="Your email" required>
+                    <textarea name="message" rows="3" placeholder="Tell us" aria-label="Tell us" required></textarea>
+                    <button class="contact-submit" type="submit">Send inquiry</button>
+                </form>
+
+                <p class="contact-direct">contact us with <a href="https://www.instagram.com/futonic/" target="_blank" rel="noopener noreferrer">instagram/@futonic</a> or <a href="mailto:igbal@futonic.co">email/igbal@futonic.co</a></p>
+
+                <a class="hiring-link" href="hiring.html">we're hiring<span class="hiring-mark">!</span></a>
+            </div>
         </section>
     </main>
+    <script>
+        document.querySelectorAll('.portrait-frame').forEach((frame) => {
+            const video = frame.querySelector('.portrait-video');
+
+            if (!video) return;
+
+            frame.addEventListener('pointerenter', () => {
+                video.currentTime = 0;
+                video.play().catch(() => {});
+            });
+
+            frame.addEventListener('pointerleave', () => {
+                video.pause();
+                video.currentTime = 0;
+            });
+        });
+
+        const joinScreen = document.querySelector('.join-screen');
+        const joinTrigger = document.querySelector('.join-trigger');
+        const contactForm = document.querySelector('#contact-form');
+
+        joinTrigger?.addEventListener('click', () => {
+            joinScreen.classList.add('is-contact-open');
+            joinTrigger.setAttribute('aria-expanded', 'true');
+            contactForm?.querySelector('input')?.focus();
+        });
+
+        const shimmerCanvas = document.querySelector('.hero-shimmer');
+
+        if (shimmerCanvas) {
+            const context = shimmerCanvas.getContext('2d');
+            const pitch = 12;
+            const radius = 1.15;
+            const bucketCount = 64;
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            let width = 0;
+            let height = 0;
+            let points = [];
+            let frameId = null;
+            let isVisible = false;
+            let isPageVisible = !document.hidden;
+
+            const resizeShimmer = () => {
+                const bounds = shimmerCanvas.getBoundingClientRect();
+                const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+                width = bounds.width;
+                height = bounds.height;
+                shimmerCanvas.width = Math.round(width * pixelRatio);
+                shimmerCanvas.height = Math.round(height * pixelRatio);
+                context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+
+                const columns = Math.floor(width / pitch);
+                const rows = Math.floor(height / pitch);
+                const firstX = (width - (columns - 1) * pitch) / 2;
+                const firstY = (height - (rows - 1) * pitch) / 2;
+
+                points = [];
+                for (let row = 0; row < rows; row += 1) {
+                    for (let column = 0; column < columns; column += 1) {
+                        points.push({ x: firstX + column * pitch, y: firstY + row * pitch });
+                    }
+                }
+            };
+
+            const paintShimmer = (time) => {
+                context.clearRect(0, 0, width, height);
+
+                const reach = Math.min(width, height) * 0.34;
+                const lightX = width * (0.5 + 0.28 * Math.sin(time / 2800));
+                const lightY = height * (0.5 + 0.24 * Math.cos(time / 3700));
+                const ambientAlpha = 0.025 + 0.025 * (0.5 + 0.5 * Math.sin(time / 2200));
+                const buckets = Array.from({ length: bucketCount }, () => []);
+
+                points.forEach(({ x, y }) => {
+                    const dx = x - lightX;
+                    const dy = y - lightY;
+                    const q = (dx * dx + dy * dy) / (reach * reach);
+
+                    const lightAlpha = q > 7
+                        ? 0
+                        : Math.min(1, Math.exp(-2.3 * q) + 0.3 * Math.exp(-0.6 * q));
+                    const alpha = Math.min(0.2, ambientAlpha + lightAlpha * 0.15);
+                    const bucket = Math.floor(alpha * (bucketCount - 1));
+
+                    if (bucket > 0) buckets[bucket].push({ x, y });
+                });
+
+                buckets.forEach((dots, bucket) => {
+                    if (bucket === 0 || dots.length === 0) return;
+
+                    context.fillStyle = `rgba(255, 255, 255, ${bucket / (bucketCount - 1)})`;
+                    context.beginPath();
+                    dots.forEach(({ x, y }) => {
+                        context.moveTo(x + radius, y);
+                        context.arc(x, y, radius, 0, Math.PI * 2);
+                    });
+                    context.fill();
+                });
+            };
+
+            const stopShimmer = () => {
+                if (frameId !== null) window.cancelAnimationFrame(frameId);
+                frameId = null;
+            };
+
+            const animateShimmer = (time) => {
+                paintShimmer(time);
+                frameId = window.requestAnimationFrame(animateShimmer);
+            };
+
+            const updateShimmer = () => {
+                stopShimmer();
+
+                if (prefersReducedMotion) {
+                    paintShimmer(4200);
+                    return;
+                }
+
+                if (isVisible && isPageVisible) {
+                    frameId = window.requestAnimationFrame(animateShimmer);
+                }
+            };
+
+            resizeShimmer();
+            window.addEventListener('resize', () => {
+                resizeShimmer();
+                updateShimmer();
+            });
+            document.addEventListener('visibilitychange', () => {
+                isPageVisible = !document.hidden;
+                updateShimmer();
+            });
+
+            new IntersectionObserver(([entry]) => {
+                isVisible = entry.isIntersecting;
+                updateShimmer();
+            }, { threshold: 0.05 }).observe(shimmerCanvas);
+        }
+
+    </script>
 </body>
 </html>
